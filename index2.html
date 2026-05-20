@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Marriage Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F8F5F0;
+      color: #2B2B2B;
+      overflow-x: hidden;
+    }
+
+    .playfair {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .bengali {
+      font-family: 'Noto Sans Bengali', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-bg {
+      background:
+        linear-gradient(rgba(248,245,240,0.75), rgba(248,245,240,0.92)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-title {
+      color: #1F4D3E;
+    }
+
+    .primary-btn {
+      background: #1F4D3E;
+      transition: 0.3s;
+    }
+
+    .primary-btn:hover {
+      background: #16392f;
+      transform: translateY(-2px);
+    }
+
+    .outline-btn {
+      border: 1px solid #1F4D3E;
+      color: #1F4D3E;
+      transition: 0.3s;
+    }
+
+    .outline-btn:hover {
+      background: #1F4D3E;
+      color: white;
+    }
+
+    .soft-card {
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-white/40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div>
+        <h1 class="playfair text-2xl font-bold text-[#1F4D3E]">
+          Marriage Portfolio
+        </h1>
+      </div>
+
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-[#1F4D3E]">About</a>
+        <a href="#vision" class="hover:text-[#1F4D3E]">Vision</a>
+        <a href="#values" class="hover:text-[#1F4D3E]">Values</a>
+        <a href="#questions" class="hover:text-[#1F4D3E]">Questions</a>
+      </div>
+
+      <button
+        class="outline-btn px-5 py-2 rounded-full text-sm font-medium">
+        Private Access
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-24">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT -->
+      <div class="fade-up">
+
+        <p class="uppercase tracking-[6px] text-sm text-[#1F4D3E] mb-5">
+          بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+        </p>
+
+        <h1 class="playfair text-5xl md:text-7xl leading-tight font-bold mb-8">
+
+          Seeking a Marriage Built on
+          <span class="text-[#1F4D3E]">
+            Deen, Mercy & Peace
+          </span>
+
+        </h1>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-xl">
+
+          Assalamu Alaikum.
+          This website is a respectful introduction to my values,
+          family, life philosophy, and intentions regarding marriage —
+          built with sincerity, modesty, emotional intelligence,
+          and privacy in mind.
+
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+
+          <a href="#about"
+            class="primary-btn text-white px-8 py-4 rounded-full font-medium">
+            Explore About Me
+          </a>
+
+          <a href="#questions"
+            class="outline-btn px-8 py-4 rounded-full font-medium">
+            Compatibility Questions
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="fade-up">
+
+        <div class="relative">
+
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+            class="rounded-[40px] shadow-2xl w-full object-cover h-[650px]"
+          />
+
+          <div class="absolute -bottom-6 -left-6 soft-card p-6 max-w-sm">
+
+            <p class="text-sm uppercase tracking-[3px] text-[#1F4D3E] mb-3">
+              Life Philosophy
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              “Marriage is companionship, mercy,
+              emotional safety, and a peaceful journey toward Allah together.”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+
+        <p class="uppercase tracking-[5px] text-sm text-[#1F4D3E] mb-4">
+          About Me
+        </p>
+
+        <h2 class="playfair text-5xl font-bold section-title mb-6">
+          Character Before Perfection
+        </h2>
+
+        <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+          I value sincerity, responsibility, emotional maturity,
+          spiritual growth, meaningful communication,
+          and a peaceful family-centered life.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-5 text-[#1F4D3E]">
+            Education & Career
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Add your educational background,
+            professional goals,
+            and aspirations here.
+          </p>
+        </div>
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-5 text-[#1F4D3E]">
+            Personality
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Calm, reflective, responsible,
+            growth-oriented,
+            emotionally aware,
+            and family-focused.
+          </p>
+        </div>
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-5 text-[#1F4D3E]">
+            Interests
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Reading, learning,
+            meaningful conversations,
+            Islamic growth,
+            travel, reflection, and creativity.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VISION -->
+  <section id="vision" class="py-28 bg-[#1F4D3E] text-white">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <p class="uppercase tracking-[5px] text-sm mb-5 text-[#D4B483]">
+        Marriage Vision
+      </p>
+
+      <h2 class="playfair text-5xl font-bold mb-10">
+        A Partnership Built on Trust & Deen
+      </h2>
+
+      <p class="text-xl leading-relaxed text-gray-200 max-w-4xl mx-auto">
+        I believe marriage is not simply companionship,
+        but a lifelong partnership rooted in mercy,
+        patience, emotional safety,
+        communication, and mutual growth toward Allah.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- VALUES -->
+  <section id="values" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+
+        <p class="uppercase tracking-[5px] text-sm text-[#1F4D3E] mb-4">
+          Core Values
+        </p>
+
+        <h2 class="playfair text-5xl font-bold section-title">
+          Principles I Try to Live By
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="soft-card p-8 text-center">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            Sincerity
+          </h3>
+          <p class="text-gray-600">
+            Honest intentions and clear communication.
+          </p>
+        </div>
+
+        <div class="soft-card p-8 text-center">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            Modesty
+          </h3>
+          <p class="text-gray-600">
+            Respecting boundaries with dignity and care.
+          </p>
+        </div>
+
+        <div class="soft-card p-8 text-center">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            Emotional Safety
+          </h3>
+          <p class="text-gray-600">
+            Compassion, patience, and understanding.
+          </p>
+        </div>
+
+        <div class="soft-card p-8 text-center">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            Growth
+          </h3>
+          <p class="text-gray-600">
+            Becoming better together in dunya and akhirah.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- QUESTIONS -->
+  <section id="questions" class="py-28 bg-[#F1ECE3]">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+
+        <p class="uppercase tracking-[5px] text-sm text-[#1F4D3E] mb-4">
+          Reflection Questions
+        </p>
+
+        <h2 class="playfair text-5xl font-bold section-title mb-6">
+          Understanding Beyond Appearances
+        </h2>
+
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          Meaningful conversations create stronger foundations
+          than surface-level impressions.
+        </p>
+
+      </div>
+
+      <div class="space-y-6">
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            What does Islamic marriage mean to you?
+          </h3>
+        </div>
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            How do you usually handle misunderstandings?
+          </h3>
+        </div>
+
+        <div class="soft-card p-8">
+          <h3 class="font-semibold text-xl mb-3 text-[#1F4D3E]">
+            What kind of emotional environment feels safest to you?
+          </h3>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+
+        <button
+          class="primary-btn text-white px-10 py-4 rounded-full font-medium">
+          Begin Compatibility Questions
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRIVATE ACCESS -->
+  <section class="py-28">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="soft-card p-14 text-center">
+
+        <p class="uppercase tracking-[5px] text-sm text-[#1F4D3E] mb-4">
+          Private Access
+        </p>
+
+        <h2 class="playfair text-5xl font-bold section-title mb-8">
+          Deeper Reflections Are Shared With Trust
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed text-lg max-w-2xl mx-auto mb-10">
+
+          Some sections of this website contain personal reflections,
+          family moments, emotional insights,
+          and private thoughts intended only for serious
+          and respectful individuals.
+
+        </p>
+
+        <button
+          class="primary-btn text-white px-10 py-4 rounded-full font-medium">
+          Request Private Access
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1F4D3E] text-white py-14">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <h2 class="playfair text-3xl mb-6">
+        Marriage Portfolio
+      </h2>
+
+      <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
+        May Allah place barakah in every sincere intention,
+        guide hearts toward goodness,
+        and bless every peaceful journey.
+      </p>
+
+      <div class="flex justify-center gap-6 text-sm text-gray-300">
+        <a href="#">About</a>
+        <a href="#">Vision</a>
+        <a href="#">Questions</a>
+        <a href="#">Private Access</a>
+      </div>
+
+      <div class="mt-10 text-sm text-gray-400">
+        © 2026 All Rights Reserved
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
