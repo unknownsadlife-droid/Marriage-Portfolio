@@ -1,366 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Marriage Portfolio</title>
+<title>Marriage Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-    body{
-      font-family:'Inter',sans-serif;
-      background:#f7f5f1;
-      color:#1f2937;
-      line-height:1.7;
-    }
+<style>
 
-    .container{
-      width:90%;
-      max-width:1150px;
-      margin:auto;
-    }
+body{
+  font-family:'Poppins',sans-serif;
+  background:#F8F5F0;
+  color:#2B2B2B;
+  margin:0;
+}
 
-    header{
-      padding:30px 0;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+.playfair{
+  font-family:'Playfair Display',serif;
+}
 
-    .logo{
-      font-family:'Cormorant Garamond',serif;
-      font-size:32px;
-      font-weight:700;
-      color:#111827;
-    }
+.hero{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(248,245,240,0.85), rgba(248,245,240,0.92)),
+  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
 
-    nav a{
-      text-decoration:none;
-      color:#374151;
-      margin-left:25px;
-      font-size:15px;
-      transition:0.3s;
-    }
+  background-size:cover;
+  background-position:center;
 
-    nav a:hover{
-      color:#0f766e;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    .hero{
-      min-height:85vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:50px 0;
-    }
+  padding:80px 20px;
+  text-align:center;
+}
 
-    .hero-content{
-      max-width:850px;
-    }
+.container{
+  max-width:1000px;
+}
 
-    .arabic{
-      font-size:24px;
-      margin-bottom:20px;
-      color:#0f766e;
-    }
+.main-title{
+  font-size:72px;
+  line-height:1.1;
+  font-weight:700;
+  margin-bottom:30px;
+  color:#222;
+}
 
-    .hero h1{
-      font-family:'Cormorant Garamond',serif;
-      font-size:72px;
-      line-height:1.1;
-      margin-bottom:25px;
-      color:#111827;
-    }
+.green{
+  color:#1F4D3E;
+}
 
-    .hero p{
-      font-size:20px;
-      color:#4b5563;
-      max-width:760px;
-      margin:auto;
-      margin-bottom:40px;
-    }
+.subtitle{
+  font-size:20px;
+  line-height:1.8;
+  max-width:700px;
+  margin:auto;
+  color:#555;
+}
 
-    .buttons{
-      display:flex;
-      gap:20px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
+.btn-group{
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-    .btn{
-      padding:15px 34px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
-      transition:0.3s;
-      display:inline-block;
-    }
+.primary-btn{
+  background:#1F4D3E;
+  color:white;
+  padding:16px 34px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
 
-    .btn-primary{
-      background:#0f766e;
-      color:white;
-    }
+.primary-btn:hover{
+  background:#16392f;
+}
 
-    .btn-primary:hover{
-      background:#115e59;
-    }
+.outline-btn{
+  border:2px solid #1F4D3E;
+  color:#1F4D3E;
+  padding:16px 34px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .btn-outline{
-      border:2px solid #0f766e;
-      color:#0f766e;
-      background:white;
-    }
+.section{
+  padding:100px 20px;
+}
 
-    .btn-outline:hover{
-      background:#0f766e;
-      color:white;
-    }
+.section-title{
+  font-size:48px;
+  text-align:center;
+  margin-bottom:20px;
+  color:#1F4D3E;
+}
 
-    section{
-      padding:90px 0;
-    }
+.section-text{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+  color:#666;
+  line-height:1.8;
+}
 
-    .section-title{
-      font-family:'Cormorant Garamond',serif;
-      font-size:48px;
-      margin-bottom:25px;
-      text-align:center;
-      color:#111827;
-    }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
 
-    .section-text{
-      max-width:850px;
-      margin:auto;
-      text-align:center;
-      font-size:18px;
-      color:#4b5563;
-    }
+.card{
+  background:white;
+  padding:40px;
+  border-radius:28px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+}
 
-    .cards{
-      margin-top:60px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
+.card h3{
+  color:#1F4D3E;
+  margin-bottom:15px;
+}
 
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:24px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-      transition:0.3s;
-    }
+.footer{
+  background:#1F4D3E;
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
 
-    .card:hover{
-      transform:translateY(-6px);
-    }
+.footer p{
+  color:#ddd;
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+}
 
-    .card h3{
-      margin-bottom:15px;
-      color:#111827;
-      font-size:24px;
-    }
+@media(max-width:768px){
 
-    .card p{
-      color:#4b5563;
-    }
+.main-title{
+  font-size:42px;
+}
 
-    footer{
-      padding:60px 20px;
-      text-align:center;
-      color:#6b7280;
-      font-size:15px;
-    }
+.section-title{
+  font-size:34px;
+}
 
-    @media(max-width:768px){
+.subtitle{
+  font-size:18px;
+}
 
-      .hero h1{
-        font-size:48px;
-      }
+}
 
-      .hero p{
-        font-size:18px;
-      }
-
-      .section-title{
-        font-size:38px;
-      }
-
-      header{
-        flex-direction:column;
-        gap:20px;
-      }
-
-      nav a{
-        margin:0 10px;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HERO -->
+<section class="hero">
 
-    <header>
-      <div class="logo">Marriage Portfolio</div>
+<div class="container">
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#vision">Vision</a>
-        <a href="#questions">Questions</a>
-      </nav>
-    </header>
+<p style="letter-spacing:5px;color:#1F4D3E;margin-bottom:20px;">
+بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+</p>
 
-    <section class="hero">
+<h1 class="main-title playfair">
+Seeking a Marriage Built on
+<span class="green">Deen, Mercy & Peace</span>
+</h1>
 
-      <div class="hero-content">
+<p class="subtitle">
+Assalamu Alaikum. This website is a respectful introduction to my values,
+family, life philosophy, and intentions regarding marriage —
+built with sincerity, modesty, emotional intelligence, and privacy in mind.
+</p>
 
-        <div class="arabic">
-          بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-        </div>
+<div class="btn-group">
 
-        <h1>
-          Seeking a Marriage Built on Deen, Mercy & Peace
-        </h1>
+<a href="#about" class="primary-btn">
+Explore About Me
+</a>
 
-        <p>
-          Assalamu Alaikum. This website is a respectful introduction
-          to my values, life philosophy, family background, goals,
-          and intentions regarding marriage — built with sincerity,
-          modesty, emotional intelligence, and privacy in mind.
-        </p>
+<a href="#questions" class="outline-btn">
+Compatibility Questions
+</a>
 
-        <div class="buttons">
+</div>
 
-          <a href="#about" class="btn btn-primary">
-            Explore About Me
-          </a>
+</div>
 
-          <a href="#questions" class="btn btn-outline">
-            Compatibility Questions
-          </a>
+</section>
 
-        </div>
+<!-- ABOUT -->
+<section class="section" id="about">
 
-      </div>
+<h2 class="section-title playfair">
+About Me
+</h2>
 
-    </section>
+<p class="section-text">
+I value sincerity, responsibility, emotional maturity,
+spiritual growth, meaningful communication,
+and a peaceful family-centered life.
+</p>
 
-  </div>
+<div class="cards">
 
-  <section id="about">
+<div class="card">
+<h3>Education & Career</h3>
+<p>
+Add your educational background,
+professional goals, and aspirations here.
+</p>
+</div>
 
-    <div class="container">
+<div class="card">
+<h3>Personality</h3>
+<p>
+Calm, reflective, responsible,
+growth-oriented, emotionally aware,
+and family-focused.
+</p>
+</div>
 
-      <h2 class="section-title">About Me</h2>
+<div class="card">
+<h3>Interests</h3>
+<p>
+Reading, learning, meaningful conversations,
+Islamic growth, travel, reflection, and creativity.
+</p>
+</div>
 
-      <p class="section-text">
-        I value sincerity, modesty, kindness, emotional maturity,
-        responsibility, and continuous self-improvement in deen and character.
-        My goal is to build a peaceful Islamic family based on mutual respect,
-        communication, mercy, and shared growth.
-      </p>
+</div>
 
-      <div class="cards">
+</section>
 
-        <div class="card">
-          <h3>Faith & Values</h3>
-          <p>
-            Deen, honesty, humility, emotional balance, and good character
-            are central to how I approach life and relationships.
-          </p>
-        </div>
+<!-- QUESTIONS -->
+<section class="section" id="questions" style="background:#F1ECE3;">
 
-        <div class="card">
-          <h3>Marriage Vision</h3>
-          <p>
-            I seek companionship built on mercy, patience, trust,
-            mutual understanding, and emotional safety.
-          </p>
-        </div>
+<h2 class="section-title playfair">
+Compatibility Questions
+</h2>
 
-        <div class="card">
-          <h3>Growth Mindset</h3>
-          <p>
-            I value learning, reflection, communication,
-            and building a balanced life between dunya and akhirah.
-          </p>
-        </div>
+<div class="cards">
 
-      </div>
+<div class="card">
+<h3>Islamic Marriage</h3>
+<p>
+What does Islamic marriage mean to you?
+</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Conflict Resolution</h3>
+<p>
+How do you usually handle misunderstandings?
+</p>
+</div>
 
-  </section>
+<div class="card">
+<h3>Emotional Safety</h3>
+<p>
+What kind of emotional environment feels safest to you?
+</p>
+</div>
 
-  <section id="vision">
+</div>
 
-    <div class="container">
+</section>
 
-      <h2 class="section-title">My Vision for Marriage</h2>
+<!-- FOOTER -->
+<footer class="footer">
 
-      <p class="section-text">
-        Marriage is not only companionship, but a journey toward Allah together —
-        built upon mercy, emotional intelligence, sabr, trust, loyalty,
-        and shared spiritual growth.
-      </p>
+<h2 class="playfair" style="font-size:42px;margin-bottom:30px;">
+Marriage Portfolio
+</h2>
 
-    </div>
+<p>
+May Allah place barakah in every sincere intention,
+guide hearts toward goodness,
+and bless every peaceful journey.
+</p>
 
-  </section>
+<div style="margin-top:40px;color:#bbb;">
+© 2026 All Rights Reserved
+</div>
 
-  <section id="questions">
-
-    <div class="container">
-
-      <h2 class="section-title">Reflection Questions</h2>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>Marriage Meaning</h3>
-          <p>
-            What does an ideal Islamic marriage mean to you?
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Conflict Resolution</h3>
-          <p>
-            How do you handle misunderstandings and emotional conflict?
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Role of Deen</h3>
-          <p>
-            What role should deen play in everyday married life?
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer>
-    May Allah place barakah in every sincere intention.
-  </footer>
+</footer>
 
 </body>
 </html>
